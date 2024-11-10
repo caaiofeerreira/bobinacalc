@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BobinaCalc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-message">
+        <p></p>
+    </div>
+    <div class="container">
+        <h1>BobinaCalc</h1>
+        <span>Calculadora de produção de bobinas.</span>
+        <label for="numBobinas">Número de bobinas no pedido:</label>
+        <input type="number" id="numBobinas" required>
+
+        <label for="pesoTubete">Peso do tubete (kg):</label>
+        <input type="number" step="0.01" id="pesoTubete" required>
+
+        <label for="pesoFilme">Peso do filme por bobina (kg):</label>
+        <input type="number" step="0.01" id="pesoFilme" required>
+
+        <label for="pesoTotalProducao">Peso total da produção (kg):</label>
+        <input type="number" step="0.01" id="pesoTotalProducao" required>
+
+        <button class="button">Calcular</button>
+        
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
