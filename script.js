@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
       resultado += `O peso da produção excedeu em ${Math.round(diferenca).toLocaleString("pt-BR")} gramas.\n`;
 
       const totalFilme = pesoFilmePorBobina * numBobinas;
-      const ajusteFilme = totalFilme * 0.03;
+      const ajusteFilme = totalFilme * 0.005;
 
       const ajusteTubete = diferenca + ajusteFilme;
 
       novoPesoFilme = (totalFilme - ajusteFilme) / numBobinas;
       novoPesoTubete = pesoTubete + (ajusteTubete / numBobinas);
 
-      resultado += `Peso do filme ajustado: ${Math.round(novoPesoFilme).toLocaleString("pt-BR")} kg por bobina.\n`;
-      resultado += `Peso do tubete ajustado: ${Math.round(novoPesoTubete).toLocaleString("pt-BR")} kg por bobina.\n`;
+      resultado += `Peso do filme ajustado: ${Math.round(novoPesoFilme).toLocaleString("pt-BR")} gramas por bobina.\n`;
+      resultado += `Peso do tubete ajustado: ${Math.round(novoPesoTubete).toLocaleString("pt-BR")} gramas por bobina.\n`;
     } else if (diferenca < 0) {
       resultado += `O peso da produção ficou abaixo em ${(-diferenca).toLocaleString("pt-BR")} kg.\n`;
     } else {
