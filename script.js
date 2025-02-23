@@ -53,6 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
       resultado += `Peso do FILME ajustado: ${Math.round(novoPesoFilme).toLocaleString("pt-BR")} gramas por bobina.\n`;
     } else if (diferenca < 0) {
       resultado += `O peso da produção ficou abaixo em ${(-diferenca).toLocaleString("pt-BR")} kg.\n`;
+
+      const info = document.getElementById('resultado');
+      info.classList.add('ativo')
+      info.innerText = resultado;
+      return;
     } else {
       resultado += `O peso da produção está exatamente conforme o esperado.\n`;
     }
