@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pesoTotalEsperado = (pesoTubo + pesoFilmePorBobina) * numBobinas;
 
-    let resultado = `Peso total da produção: ${Math.round(pesoTotalProducao).toLocaleString("pt-BR")} kg.\n`;
-    resultado += `Peso total esperado: ${Math.round(pesoTotalEsperado).toLocaleString("pt-BR")} kg.\n`;
+    let resultado = `Peso total da produção: ${Math.round(pesoTotalProducao).toLocaleString("pt-BR")} gramas.\n`;
+    resultado += `Peso total esperado: ${Math.round(pesoTotalEsperado).toLocaleString("pt-BR")} gramas.\n`;
     resultado += "\n";
     
     const diferenca = pesoTotalProducao - pesoTotalEsperado;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       resultado += `Peso do TUBO ajustado: ${Math.round(novoPesoTubo).toLocaleString("pt-BR")} gramas por bobina.\n`;
       resultado += `Peso do FILME ajustado: ${Math.round(novoPesoFilme).toLocaleString("pt-BR")} gramas por bobina.\n`;
     } else if (diferenca < 0) {
-      resultado += `O peso da produção ficou abaixo em ${(-diferenca).toLocaleString("pt-BR")} kg.\n`;
+      resultado += `O peso da produção ficou abaixo em ${(-diferenca).toLocaleString("pt-BR")} gramas.\n`;
 
       const info = document.getElementById('resultado');
       info.classList.add('ativo')
